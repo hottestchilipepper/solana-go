@@ -79,5 +79,9 @@ func (cl *Client) GetTokenAccountsByDelegate(
 
 type GetTokenAccountsResult struct {
 	RPCContext
-	Value []*Account `json:"value"`
+	Value []*TokenAccount `json:"value"`
+}
+
+type TokenAccount struct {
+	Account *Account `json:"account"`
 }
